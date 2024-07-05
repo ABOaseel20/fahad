@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام تحضير الطلاب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>نظام تحضير الطلاب</h1>
+        <h2>مدرسة المستقبل</h2>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h3>إضافة طالب</h3>
+            <input type="text" id="studentName" placeholder="أدخل اسم الطالب">
+            <button onclick="addStudent()">إضافة طالب</button>
+        </div>
+        <div class="section">
+            <h3>تسجيل الحضور</h3>
+            <select id="studentSelect"></select>
+            <button onclick="recordAttendance('حاضر')" class="present">حاضر</button>
+            <button onclick="recordAttendance('غائب')" class="absent">غائب</button>
+        </div>
+        <div class="section">
+            <h3>تقرير الحضور</h3>
+            <button onclick="displayAttendance()">عرض الحضور</button>
+            <button onclick="printAttendance()">طباعة الحضور</button>
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>الطالب</th>
+                        <th>التاريخ</th>
+                        <th>الحالة</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceList"></tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 نظام تحضير الطلاب</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
